@@ -66,8 +66,8 @@ Antes de começar, garanta que tem instalado na máquina:
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/MyNameisNunes/Avalia-oDSMIII.git
-cd Avalia-oDSMIII
+git clone https://github.com/MyNameisNunes/ProvaDesenvolvimentoWebIII-Gabriel-Thiago.git
+cd ProvaDesenvolvimentoWebIII-Gabriel-Thiago
 
 # 2. Instale as dependências
 npm install
