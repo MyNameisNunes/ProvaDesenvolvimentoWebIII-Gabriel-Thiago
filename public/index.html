@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurante Cremosinho · Espera Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/home.css" />
+</head>
+<body class="home">
+    <!-- ===== Topo ===== -->
+    <header class="home__topbar">
+        <span class="home__logo">Cremosinho</span>
+        <span class="home__pill"><i data-lucide="circle-dot" class="icon"></i> Espera Digital</span>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+        <div class="hero__content">
+            <span class="hero__eyebrow">Restaurante Cremosinho</span>
+            <h1 class="hero__title">Sua mesa, sem<br />fila na calçada.</h1>
+            <p class="hero__lead">
+                Entre na espera pelo celular, acompanhe o salão em tempo real e
+                receba sua mesa no momento certo. Aqui, esperar também é uma experiência.
+            </p>
+
+            <a href="./mesas.html" class="cta">
+                <i data-lucide="utensils-crossed" class="icon"></i>
+                Entrar na espera
+                <i data-lucide="arrow-right" class="icon"></i>
+            </a>
+
+            <div class="hero__meta">
+                <div class="hero__metaItem">
+                    <i data-lucide="clock" class="icon"></i>
+                    <div>
+                        <strong id="heroHora">--:--</strong>
+                        <span>Agora</span>
+                    </div>
+                </div>
+                <div class="hero__metaItem">
+                    <i data-lucide="hourglass" class="icon"></i>
+                    <div>
+                        <strong id="heroEspera">~25 min</strong>
+                        <span>Espera estimada</span>
+                    </div>
+                </div>
+                <div class="hero__metaItem">
+                    <i data-lucide="users" class="icon"></i>
+                    <div>
+                        <strong id="heroFila">8</strong>
+                        <span>Na fila agora</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__plate" aria-hidden="true">
+            <div class="plate">
+                <i data-lucide="chef-hat" class="plate__icon"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Como funciona ===== -->
+    <section class="steps">
+        <h2 class="steps__title">Como funciona</h2>
+        <div class="steps__grid">
+            <article class="step">
+                <span class="step__num">1</span>
+                <i data-lucide="smartphone" class="step__icon"></i>
+                <h3>Entre na espera</h3>
+                <p>Toque em "Entrar na espera" e informe seus dados em segundos.</p>
+            </article>
+            <article class="step">
+                <span class="step__num">2</span>
+                <i data-lucide="layout-grid" class="step__icon"></i>
+                <h3>Acompanhe o salão</h3>
+                <p>Veja o mapa de mesas ao vivo — disponíveis, reservadas e ocupadas.</p>
+            </article>
+            <article class="step">
+                <span class="step__num">3</span>
+                <i data-lucide="bell-ring" class="step__icon"></i>
+                <h3>Sente-se e aproveite</h3>
+                <p>Quando sua mesa estiver pronta, é só confirmar a reserva.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== Showcase do aplicativo (mockup fake) ===== -->
+    <section class="appshow">
+        <div class="appshow__text">
+            <span class="hero__eyebrow">No seu bolso</span>
+            <h2 class="appshow__title">Leve a sua mesa<br />no aplicativo.</h2>
+            <p class="appshow__lead">
+                Acompanhe sua posição na fila, receba um aviso quando a mesa
+                estiver pronta e confirme tudo pelo celular — sem instalar nada extra.
+            </p>
+            <div class="appshow__stores">
+                <span class="store"><i data-lucide="smartphone" class="icon"></i> App Store</span>
+                <span class="store"><i data-lucide="smartphone" class="icon"></i> Google Play</span>
+            </div>
+        </div>
+
+        <!-- Celular fake -->
+        <div class="phone" aria-hidden="true">
+            <span class="phone__notch"></span>
+            <div class="phone__screen">
+                <div class="appbar">
+                    <span class="appbar__time">20:14</span>
+                    <span class="appbar__icons">
+                        <i data-lucide="signal" class="icon"></i>
+                        <i data-lucide="wifi" class="icon"></i>
+                        <i data-lucide="battery-full" class="icon"></i>
+                    </span>
+                </div>
+
+                <div class="appui">
+                    <div class="appui__brand">Cremosinho</div>
+
+                    <div class="appui__queue">
+                        <span class="appui__queueLabel">Você está na fila</span>
+                        <span class="appui__pos">3º</span>
+                        <span class="appui__eta"><i data-lucide="hourglass" class="icon"></i> ~12 min de espera</span>
+                        <div class="appui__bar"><span style="width:62%"></span></div>
+                    </div>
+
+                    <span class="appui__section">Mesas no salão</span>
+                    <ul class="appui__mesas">
+                        <li><span class="dotmini dotmini--livre"></span> Mesa 2 · 4 lugares</li>
+                        <li><span class="dotmini dotmini--reservado"></span> Mesa 4 · 6 lugares</li>
+                        <li><span class="dotmini dotmini--ocupado"></span> Mesa 6 · 8 lugares</li>
+                    </ul>
+
+                    <div class="appui__alert"><i data-lucide="bell-ring" class="icon"></i> Avisaremos quando for sua vez!</div>
+                    <button class="appui__btn">Confirmar chegada</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Rodapé ===== -->
+    <footer class="home__footer">
+        <div class="home__footerItem"><i data-lucide="map-pin" class="icon"></i> Av. das Massas, 1500 · Centro</div>
+        <div class="home__footerItem"><i data-lucide="clock-3" class="icon"></i> Seg a Dom · 11h às 23h</div>
+        <div class="home__footerItem"><i data-lucide="phone" class="icon"></i> (11) 4000-1234</div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./js/home.js"></script>
+</body>
+</html>

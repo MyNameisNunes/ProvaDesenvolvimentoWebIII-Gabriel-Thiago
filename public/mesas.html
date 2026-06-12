@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cremosinho · Mapa de Mesas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <!-- ===== Cabeçalho ===== -->
+    <header class="topbar">
+        <div class="brand">
+            <a href="./index.html" class="brand__back" aria-label="Voltar para a home">
+                <i data-lucide="arrow-left" class="icon"></i>
+            </a>
+            <div>
+                <span class="brand__mark">Restaurante Cremosinho</span>
+                <span class="brand__sub">Aqui nossa espera é diferente.</span>
+            </div>
+        </div>
+
+        <!-- Painel de data e hora (ao vivo) -->
+        <div id="relogio" class="clock">
+            <i data-lucide="calendar-clock" class="clock__icon"></i>
+            <div class="clock__text">
+                <span class="clock__time">--:--:--</span>
+                <span class="clock__date">—</span>
+            </div>
+        </div>
+
+        <button id="btnNovaReserva" class="btn btn--primary">
+            <i data-lucide="plus" class="icon"></i> Nova reserva
+        </button>
+    </header>
+
+    <main class="layout">
+        <!-- ===== Mapa visual das mesas ===== -->
+        <section class="panel panel--map">
+            <div class="panel__head">
+                <h2>Mapa de Mesas</h2>
+                <ul class="legend">
+                    <li><span class="dot dot--livre"></span> Disponível</li>
+                    <li><span class="dot dot--reservado"></span> Reservado</li>
+                    <li><span class="dot dot--ocupado"></span> Ocupado</li>
+                </ul>
+            </div>
+
+            <div class="panel__head panel__head--sub">
+                <span class="stat-hint"><i data-lucide="info" class="icon"></i> Clique numa mesa para reservar ou ver detalhes</span>
+            </div>
+
+            <div class="stats">
+                <div class="stat"><strong id="statLivre">0</strong><span>Disponíveis</span></div>
+                <div class="stat"><strong id="statReservado">0</strong><span>Reservadas</span></div>
+                <div class="stat"><strong id="statOcupado">0</strong><span>Ocupadas</span></div>
+            </div>
+
+            <div id="mapaMesas" class="mesas-grid"><!-- mesas renderizadas via JS --></div>
+        </section>
+
+        <!-- ===== Lista de reservas ===== -->
+        <aside class="panel panel--list">
+            <div class="panel__head">
+                <h2>Reservas</h2>
+            </div>
+            <div class="filtros" id="filtros">
+                <button class="chip is-active" data-status="todas">Todas</button>
+                <button class="chip" data-status="reservado">Reservadas</button>
+                <button class="chip" data-status="ocupado">Ocupadas</button>
+                <button class="chip" data-status="finalizado">Finalizadas</button>
+                <button class="chip" data-status="cancelado">Canceladas</button>
+            </div>
+            <ul id="listaReservas" class="reservas"><!-- reservas via JS --></ul>
+        </aside>
+    </main>
+
+    <!-- ===== Modal ===== -->
+    <div id="modal" class="modal" hidden>
+        <div class="modal__backdrop" data-close></div>
+        <div class="modal__card" role="dialog" aria-modal="true">
+            <button class="modal__close" data-close aria-label="Fechar">&times;</button>
+            <div id="modalBody"><!-- conteúdo dinâmico --></div>
+        </div>
+    </div>
+
+    <!-- ===== Toast ===== -->
+    <div id="toast" class="toast" hidden></div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
